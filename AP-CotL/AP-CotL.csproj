@@ -453,11 +453,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="Check.cs" />
+		<Compile Include="Archipelago\Check.cs" />
 		<Compile Include="Core.cs" />
-		<Compile Include="Item.cs" />
-		<Compile Include="Location.cs" />
-		<Compile Include="Randomizer.cs" />
+		<Compile Include="Archipelago\Item.cs" />
+		<Compile Include="Archipelago\Location.cs" />
+		<Compile Include="Archipelago\Randomizer.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
