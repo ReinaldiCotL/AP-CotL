@@ -9,7 +9,7 @@ namespace AP_CotL
     {
         public override void OnInitializeMelon()
         {
-            LoggerInstance.Msg("Initialized.");
+            LoggerInstance.Msg("AP-CotL Initialized.");
         }
     }
 }
