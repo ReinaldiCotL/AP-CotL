@@ -10,6 +10,7 @@ namespace AP_CotL
         public override void OnInitializeMelon()
         {
             LoggerInstance.Msg("AP-CotL Initialized.");
+            Randomizer.Init();
         }
     }
 }
