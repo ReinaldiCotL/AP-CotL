@@ -458,6 +458,7 @@
 		<Compile Include="Archipelago\Item.cs" />
 		<Compile Include="Archipelago\Location.cs" />
 		<Compile Include="Archipelago\Randomizer.cs" />
+		<Compile Include="Archipelago\ItemsManager.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
