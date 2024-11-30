@@ -1,4 +1,4 @@
 public class Location
 {
-    public LocationsManager.Location location;
+    public LocationsManager.Locations location;
 }

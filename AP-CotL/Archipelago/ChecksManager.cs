@@ -1,10 +1,8 @@
-using static LocationsManager;
-
 public class ChecksManager
 {
     public static List<Check> checks = new List<Check>();
 
-    public static Check FindCheckByLocation(LocationsManager.Location location)
+    public static Check FindCheckByLocation(LocationsManager.Locations location)
     {
         Check the_check = null;
 
@@ -21,7 +19,7 @@ public class ChecksManager
         return the_check;
     }
 
-    public static Check FindCheckByItem(ItemsManager.Item item)
+    public static Check FindCheckByItem(ItemsManager.Items item)
     {
         Check the_check = null;
 

@@ -4,6 +4,7 @@ public class Randomizer
     
     public static void Init()
     {
-        // Insert logic here.
+        List<Location> locations = LocationsManager.FetchLocations();
+        List<Item> items = new List<Item>();
     }
 }

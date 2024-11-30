@@ -1,4 +1,4 @@
 public class Item
 {
-    public ItemsManager.Item item;
+    public ItemsManager.Items item;
 }
