@@ -18,12 +18,6 @@ namespace AP_CotL
         public override void OnUpdate()
         {
             base.OnUpdate();
-
-            if (Input.GetKeyDown(KeyCode.F1))
-            {
-                Item.Unlock(Item.Type.BUILDING_BEDS);
-                Item.Unlock(Item.Type.ITEM_BLACK_GOLD);
-            }
         }
     }
 }
