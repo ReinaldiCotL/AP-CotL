@@ -1,4 +1,5 @@
 using MelonLoader;
+using static ItemsManager;
 
 public class ChecksManager
 {
@@ -10,7 +11,7 @@ public class ChecksManager
 
         foreach(Check check in checks)
         {
-            if (check.location.Equals(location))
+            if (check.location.location.Equals(location))
             {
                 the_check = check;
                 break;
@@ -40,15 +41,18 @@ public class ChecksManager
 
     public static void Complete(LocationsManager.Locations location)
     {
+        MelonLogger.Msg("Completing Check... " + location);
         Check check = FindCheckByLocation(location);
 
         if (check == null)
         {
+            MelonLogger.Msg("Check not found");
             return;
         }
 
         if (check.is_completed)
         {
+            MelonLogger.Msg("Check already completed");
             return;
         }
 
@@ -57,6 +61,17 @@ public class ChecksManager
 
         ItemsManager.Unlock(check.item);
 
-        MelonLogger.Msg("Check COMPLETE! | Location: " + check.location + " | Item: " + check.item);
+        MelonLogger.Msg("Check COMPLETE! | Location: " + check.location.location + " | Item: " + check.item.item);
+    }
+
+    public static void LogChecks()
+    {
+        int i = 1;
+
+        foreach (Check check in checks)
+        {
+            MelonLogger.Msg("Check #"+ i + " | Location: " + check.location.location + " | Item: " + check.item.item);
+            i++;
+        }
     }
 }

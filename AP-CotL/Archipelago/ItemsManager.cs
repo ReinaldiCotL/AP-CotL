@@ -8,6 +8,8 @@ public class ItemsManager
         ITEM_BLACK_GOLD,
     }
 
+    private static Random random = new Random();
+
     public static List<Item> FetchItems()
     {
         List<Item> items = new List<Item>();
@@ -19,6 +21,12 @@ public class ItemsManager
         }
 
         return items;
+    }
+
+    public static Item PickItem(List<Item> items)
+    {
+        int randomIndex = random.Next(items.Count);
+        return items[randomIndex];
     }
 
     public static void Unlock(Item item)

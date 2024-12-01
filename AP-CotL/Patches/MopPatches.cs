@@ -8,6 +8,8 @@ public class MopPatches
     [HarmonyPostfix]
     public static void PostfixLevelUpChores(PlayerFarming playerFarming)
     {
+        MelonLogger.Msg("Leveled up Mop: " + DataManager.Instance.ChoreXPLevel);
+
         switch(DataManager.Instance.ChoreXPLevel)
         {
             case 0:
