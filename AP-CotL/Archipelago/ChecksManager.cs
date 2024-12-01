@@ -1,3 +1,5 @@
+using MelonLoader;
+
 public class ChecksManager
 {
     public static List<Check> checks = new List<Check>();
@@ -36,8 +38,15 @@ public class ChecksManager
         return the_check;
     }
 
-    public static void Complete(Check check)
+    public static void Complete(LocationsManager.Locations location)
     {
+        Check check = FindCheckByLocation(location);
+
+        if (check == null)
+        {
+            return;
+        }
+
         if (check.is_completed)
         {
             return;
@@ -47,5 +56,7 @@ public class ChecksManager
         check.is_completed = true;
 
         ItemsManager.Unlock(check.item);
+
+        MelonLogger.Msg("Check COMPLETE! | Location: " + check.location + " | Item: " + check.item);
     }
 }
