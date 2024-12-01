@@ -35,4 +35,17 @@ public class ChecksManager
         // Check not found.
         return the_check;
     }
+
+    public static void Complete(Check check)
+    {
+        if (check.is_completed)
+        {
+            return;
+        }
+
+        check.is_hinted = true;
+        check.is_completed = true;
+
+        ItemsManager.Unlock(check.item);
+    }
 }
